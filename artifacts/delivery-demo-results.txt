@@ -1,0 +1,13 @@
+{
+  "source": "SYNTHETIC SIMULATION; no Linux kernel/perf",
+  "capture_exit_code": 0,
+  "query_exit_code": 3,
+  "segments": 6,
+  "sample_count": 40,
+  "hotspot_replayed_after_end": true,
+  "normal_phase_excluded": true,
+  "report": "C:\\Users\\DELL\\Desktop\\AI Agent codeing\\cpu-blackbox-github\\runs\\demo-20261010T062806483189Z\\report\\index.html",
+  "incident_report": "C:\\Users\\DELL\\Desktop\\AI Agent codeing\\cpu-blackbox-github\\runs\\demo-20261010T062806483189Z\\report\\incident\\index.html",
+  "comparison_report": "C:\\Users\\DELL\\Desktop\\AI Agent codeing\\cpu-blackbox-github\\runs\\demo-20261010T062806483189Z\\report\\index.html"
+}
+Report: C:\Users\DELL\Desktop\AI Agent codeing\cpu-blackbox-github\runs\demo-20261010T062806483189Z\report\index.html

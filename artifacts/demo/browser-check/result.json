@@ -1,0 +1,27 @@
+{
+  "check": "real Chromium offline report",
+  "browser_version": "154.0.8037.98",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "before": {
+    "x": 49,
+    "y": 591.453125,
+    "width": 1342,
+    "height": 123.015625
+  },
+  "after": {
+    "x": 49,
+    "y": 591.453125,
+    "width": 1342,
+    "height": 123.015625
+  },
+  "stable_height": true,
+  "zoom": true,
+  "search": true,
+  "reset": true,
+  "mobile_no_page_overflow": true,
+  "page_errors": [],
+  "source_scope": "UI only; does not validate Linux perf or CPU overhead"
+}

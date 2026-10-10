@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cpu-blackbox"
+version = "0.1.0"
+description = "Bounded Linux perf history and offline CPU flamegraphs"
+requires-python = ">=3.9"
+
+[project.scripts]
+cpu-blackbox = "cpu_blackbox.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["cpu_blackbox*"]

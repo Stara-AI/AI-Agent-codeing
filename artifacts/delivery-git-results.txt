@@ -1,0 +1,9 @@
+The bundle contains these 2 refs:
+5905ad00c98d4056e30b4b09533f4a60ae5423d2 refs/heads/master
+5905ad00c98d4056e30b4b09533f4a60ae5423d2 HEAD
+The bundle records a complete history.
+The bundle uses this hash algorithm: sha1
+C:/Users/DELL/Desktop/AI Agent codeing/cpu-blackbox-github/artifacts/git-history.bundle is okay
+
+Restored HEAD: 5905ad00c98d4056e30b4b09533f4a60ae5423d2
+Restored commits: 15

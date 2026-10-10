@@ -1,0 +1,147 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CPU 历史采样报告</title>
+<style>
+*{box-sizing:border-box}body{font-family:system-ui,sans-serif;margin:0;background:#f3f6fa;color:#172033;line-height:1.6}main{max-width:1440px;margin:auto;padding:28px}h1{font-size:28px;margin:0 0 12px}h2{font-size:20px;margin:0 0 12px}.source{padding:12px 16px;background:#fff3cd;border-left:4px solid #ca8a04;border-radius:6px;overflow-wrap:anywhere}.stats{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0}.stat{background:white;border:1px solid #dce3ed;border-radius:8px;padding:12px 18px;min-width:155px}.stat small{display:block;color:#586579}.stat strong{font-size:22px}.card{background:white;border:1px solid #dce3ed;border-radius:10px;padding:20px;margin:18px 0}.times{overflow-wrap:anywhere;font-size:14px}.note{background:#eff6ff;padding:10px 14px;border-radius:6px}.controls{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:14px 0}input,button{font:inherit;padding:8px 12px;border:1px solid #cbd5e1;border-radius:6px}button{background:#f1f5f9;cursor:pointer}input{min-width:220px}.graph-scroll{overflow-x:auto}.graph-scroll svg{display:block;width:100%;min-width:760px;height:auto;background:#fff}g[data-id]{cursor:pointer}g.hit rect{fill:#c026d3}g:focus rect{stroke:#172033;stroke-width:2}text{font-family:monospace}.detail{min-height:28px;overflow-wrap:anywhere;font-size:14px}a{color:#1d4ed8}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;background:#f8fafc;padding:12px}summary{cursor:pointer}#matches{color:#586579;font-size:14px}
+</style></head><body><main><h1>CPU 历史采样报告</h1><p id="source-banner" class="source">SYNTHETIC SIMULATION / 合成模拟，不是真实 Linux perf 采样</p>
+<div class="stats"><div class="stat"><small>窗口样本</small><strong>203</strong></div><div class="stat"><small>不同调用路径</small><strong>2</strong></div><div class="stat"><small>窗口长度</small><strong>5.969 秒</strong></div><div class="stat"><small>覆盖提示</small><strong style="font-size:17px">样本边界有缺口</strong></div></div>
+<p class="times">查询起点：2026-10-10 06:11:08.580581800 UTC<br>查询终点：2026-10-10 06:11:14.549581801 UTC（不包含终点）</p>
+<section class="card"><h2>调用栈火焰图</h2><p>从下往上读调用层级；宽度表示选中样本的占比，横轴不是时间。祖先帧包含子调用，不能把各层占比相加。</p><p class="note" id="path-note">不同调用路径形成分支。点击一个分支可展开其内部，恢复全图可再次比较各分支。</p>
+<div class="controls"><button id="reset" type="button">恢复全图</button><input id="search" aria-label="搜索函数" placeholder="搜索函数"><span id="matches"></span></div>
+<p id="focus-label" class="detail"></p><div class="graph-scroll"><svg xmlns="http://www.w3.org/2000/svg" width="1200" height="110" viewBox="0 0 1200 110" role="img" aria-label="CPU flamegraph"><g data-id="0" tabindex="0"><title>all samples: 203 samples (100.00%)</title><rect x="0.0000" y="88" width="1200.0000" height="21" fill="hsl(0,85%,65%)" stroke="white"/><text x="3.0000" y="103" font-size="12" pointer-events="none">all samples</text></g><g data-id="1" tabindex="0"><title>simulated-service [26660]: 203 samples (100.00%)</title><rect x="0.0000" y="66" width="1200.0000" height="21" fill="hsl(17,85%,65%)" stroke="white"/><text x="3.0000" y="81" font-size="12" pointer-events="none">simulated-service [26660]</text></g><g data-id="2" tabindex="0"><title>main: 203 samples (100.00%)</title><rect x="0.0000" y="44" width="1200.0000" height="21" fill="hsl(34,85%,65%)" stroke="white"/><text x="3.0000" y="59" font-size="12" pointer-events="none">main</text></g><g data-id="3" tabindex="0"><title>request_handler: 203 samples (100.00%)</title><rect x="0.0000" y="22" width="1200.0000" height="21" fill="hsl(51,85%,65%)" stroke="white"/><text x="3.0000" y="37" font-size="12" pointer-events="none">request_handler</text></g><g data-id="4" tabindex="0"><title>hot_leaf: 60 samples (29.56%)</title><rect x="0.0000" y="0" width="354.6798" height="21" fill="hsl(13,85%,65%)" stroke="white"/><text x="3.0000" y="15" font-size="12" pointer-events="none">hot_leaf</text></g><g data-id="5" tabindex="0"><title>normal_work: 143 samples (70.44%)</title><rect x="354.6798" y="0" width="845.3202" height="21" fill="hsl(30,85%,65%)" stroke="white"/><text x="357.6798" y="15" font-size="12" pointer-events="none">normal_work</text></g></svg></div><p id="frame-detail" class="detail" role="status" aria-live="polite"></p>
+<p><a href="flamegraph.svg">打开静态 SVG</a> · <a href="stacks.folded">调用栈原始计数</a> · <a href="report.json">查询元数据</a></p></section>
+<section class="card"><h2>覆盖与结论边界</h2><p>样本首末边界间记录了 5 个缺口，合计 203.000 ms。缺口可能来自空闲、丢样或缺失采集，不能据此证明全程连续。</p><p>CPU 样本提供 on-CPU 路径线索。真实业务根因仍需结合监控、日志与代码验证；合成数据只演示流程。</p><details><summary>查询详情（原始 JSON）</summary><pre>{
+  &quot;start_wall_ns&quot;: 1791612668580581800,
+  &quot;end_wall_ns&quot;: 1791612674549581801,
+  &quot;sample_count&quot;: 203,
+  &quot;unknown_samples&quot;: 0,
+  &quot;events&quot;: [
+    &quot;cpu-clock&quot;
+  ],
+  &quot;clock_mappings&quot;: [
+    {
+      &quot;session&quot;: &quot;cd6223b1b9af44a5adf86a28252fc268&quot;,
+      &quot;uncertainty_ns&quot;: 7417400
+    }
+  ],
+  &quot;sample_coverage_gaps_wall_ns&quot;: [
+    [
+      1791612669549581801,
+      1791612669596581800
+    ],
+    [
+      1791612670565581801,
+      1791612670596581800
+    ],
+    [
+      1791612671565581801,
+      1791612671596581800
+    ],
+    [
+      1791612672565581801,
+      1791612672612581800
+    ],
+    [
+      1791612673565581801,
+      1791612673612581800
+    ]
+  ],
+  &quot;coverage_note&quot;: &quot;Sample bounds only: gaps can indicate idle periods, loss or missing collection; not proof of uninterrupted coverage.&quot;,
+  &quot;segments&quot;: [
+    {
+      &quot;path&quot;: &quot;C:\\Users\\DELL\\Desktop\\AI Agent codeing\\cpu-blackbox\\artifacts\\demo\\data\\cd6223b1b9af44a5adf86a28252fc268\\samples-000000.synthetic&quot;,
+      &quot;session&quot;: &quot;cd6223b1b9af44a5adf86a28252fc268&quot;,
+      &quot;first_ns&quot;: 80424093000000,
+      &quot;last_ns&quot;: 80425062000000,
+      &quot;size&quot;: 7242,
+      &quot;state&quot;: &quot;AVAILABLE&quot;,
+      &quot;error&quot;: &quot;&quot;,
+      &quot;sealed_wall_ns&quot;: 1791612669583326400
+    },
+    {
+      &quot;path&quot;: &quot;C:\\Users\\DELL\\Desktop\\AI Agent codeing\\cpu-blackbox\\artifacts\\demo\\data\\cd6223b1b9af44a5adf86a28252fc268\\samples-000001.synthetic&quot;,
+      &quot;session&quot;: &quot;cd6223b1b9af44a5adf86a28252fc268&quot;,
+      &quot;first_ns&quot;: 80425109000000,
+      &quot;last_ns&quot;: 80426078000000,
+      &quot;size&quot;: 7206,
+      &quot;state&quot;: &quot;AVAILABLE&quot;,
+      &quot;error&quot;: &quot;&quot;,
+      &quot;sealed_wall_ns&quot;: 1791612670592889000
+    },
+    {
+      &quot;path&quot;: &quot;C:\\Users\\DELL\\Desktop\\AI Agent codeing\\cpu-blackbox\\artifacts\\demo\\data\\cd6223b1b9af44a5adf86a28252fc268\\samples-000002.synthetic&quot;,
+      &quot;session&quot;: &quot;cd6223b1b9af44a5adf86a28252fc268&quot;,
+      &quot;first_ns&quot;: 80426109000000,
+      &quot;last_ns&quot;: 80427078000000,
+      &quot;size&quot;: 7038,
+      &quot;state&quot;: &quot;AVAILABLE&quot;,
+      &quot;error&quot;: &quot;&quot;,
+      &quot;sealed_wall_ns&quot;: 1791612671603596300
+    },
+    {
+      &quot;path&quot;: &quot;C:\\Users\\DELL\\Desktop\\AI Agent codeing\\cpu-blackbox\\artifacts\\demo\\data\\cd6223b1b9af44a5adf86a28252fc268\\samples-000003.synthetic&quot;,
+      &quot;session&quot;: &quot;cd6223b1b9af44a5adf86a28252fc268&quot;,
+      &quot;first_ns&quot;: 80427109000000,
+      &quot;last_ns&quot;: 80428078000000,
+      &quot;size&quot;: 7122,
+      &quot;state&quot;: &quot;AVAILABLE&quot;,
+      &quot;error&quot;: &quot;&quot;,
+      &quot;sealed_wall_ns&quot;: 1791612672603661200
+    },
+    {
+      &quot;path&quot;: &quot;C:\\Users\\DELL\\Desktop\\AI Agent codeing\\cpu-blackbox\\artifacts\\demo\\data\\cd6223b1b9af44a5adf86a28252fc268\\samples-000004.synthetic&quot;,
+      &quot;session&quot;: &quot;cd6223b1b9af44a5adf86a28252fc268&quot;,
+      &quot;first_ns&quot;: 80428125000000,
+      &quot;last_ns&quot;: 80429078000000,
+      &quot;size&quot;: 7242,
+      &quot;state&quot;: &quot;AVAILABLE&quot;,
+      &quot;error&quot;: &quot;&quot;,
+      &quot;sealed_wall_ns&quot;: 1791612673615001500
+    },
+    {
+      &quot;path&quot;: &quot;C:\\Users\\DELL\\Desktop\\AI Agent codeing\\cpu-blackbox\\artifacts\\demo\\data\\cd6223b1b9af44a5adf86a28252fc268\\samples-000005.synthetic&quot;,
+      &quot;session&quot;: &quot;cd6223b1b9af44a5adf86a28252fc268&quot;,
+      &quot;first_ns&quot;: 80429125000000,
+      &quot;last_ns&quot;: 80430062000000,
+      &quot;size&quot;: 7029,
+      &quot;state&quot;: &quot;AVAILABLE&quot;,
+      &quot;error&quot;: &quot;&quot;,
+      &quot;sealed_wall_ns&quot;: 1791612674579722500
+    }
+  ],
+  &quot;warnings&quot;: [
+    &quot;Synthetic simulation data; not Linux perf evidence&quot;,
+    &quot;Synthetic simulation data; not Linux perf evidence&quot;,
+    &quot;Synthetic simulation data; not Linux perf evidence&quot;,
+    &quot;Synthetic simulation data; not Linux perf evidence&quot;,
+    &quot;Synthetic simulation data; not Linux perf evidence&quot;,
+    &quot;Synthetic simulation data; not Linux perf evidence&quot;
+  ],
+  &quot;config&quot;: {
+    &quot;frequency_hz&quot;: 49,
+    &quot;rotation_seconds&quot;: 1,
+    &quot;retention_hours&quot;: 24,
+    &quot;max_data_bytes&quot;: 2147483648,
+    &quot;min_free_bytes&quot;: 1073741824,
+    &quot;disk_check_seconds&quot;: 5,
+    &quot;call_graph&quot;: &quot;fp&quot;,
+    &quot;event&quot;: &quot;cpu-clock&quot;,
+    &quot;perf_timeout_seconds&quot;: 120,
+    &quot;max_query_seconds&quot;: 3600,
+    &quot;max_decode_bytes&quot;: 268435456,
+    &quot;max_report_bytes&quot;: 67108864,
+    &quot;clock_jump_ns&quot;: 100000000,
+    &quot;source&quot;: &quot;synthetic&quot;
+  },
+  &quot;source&quot;: &quot;SYNTHETIC SIMULATION / 合成模拟，不是真实 Linux perf 采样&quot;,
+  &quot;status&quot;: &quot;partial&quot;
+}</pre></details></section>
+<script>const nodes=[{"name": "all samples", "value": 203, "x": 0, "width": 1.0, "depth": 0, "path": []}, {"name": "simulated-service [26660]", "value": 203, "x": 0, "width": 1.0, "depth": 1, "path": ["simulated-service [26660]"]}, {"name": "main", "value": 203, "x": 0, "width": 1.0, "depth": 2, "path": ["simulated-service [26660]", "main"]}, {"name": "request_handler", "value": 203, "x": 0, "width": 1.0, "depth": 3, "path": ["simulated-service [26660]", "main", "request_handler"]}, {"name": "hot_leaf", "value": 60, "x": 0, "width": 0.2955665024630542, "depth": 4, "path": ["simulated-service [26660]", "main", "request_handler", "hot_leaf"]}, {"name": "normal_work", "value": 143, "x": 0.2955665024630542, "width": 0.7044334975369458, "depth": 4, "path": ["simulated-service [26660]", "main", "request_handler", "normal_work"]}];
+const svg=document.querySelector('svg');
+const groups=Array.from(document.querySelectorAll('g[data-id]'));
+let selected=nodes[0];
+const prefix=(a,b)=>a.length<=b.length&&a.every((part,i)=>part===b[i]);
+function details(n){document.getElementById('frame-detail').textContent=`${n.name}：${n.value} 个样本，占全窗口 ${(100*n.value/nodes[0].value).toFixed(2)}%（含子调用）`;}
+function search(){const term=document.getElementById('search').value.toLowerCase();let total=0,visible=0;groups.forEach(g=>{const hit=term!==''&&nodes[Number(g.dataset.id)].name.toLowerCase().includes(term);g.classList.toggle('hit',hit);if(hit){total++;if(g.style.display!=='none')visible++;}});document.getElementById('matches').textContent=term?`${visible} 个当前匹配（全图 ${total} 个）`:'';}
+function zoom(n){if(n.width<=0)return;selected=n;groups.forEach(g=>{const frame=nodes[Number(g.dataset.id)];const ancestor=prefix(frame.path,n.path);const descendant=prefix(n.path,frame.path);g.style.display=ancestor||descendant?'':'none';if(!ancestor&&!descendant)return;const x=ancestor?0:Math.max(0,(frame.x-n.x)*1200/n.width);const width=ancestor?1200:Math.min(1200-x,frame.width*1200/n.width);const rect=g.querySelector('rect');rect.setAttribute('x',x);rect.setAttribute('width',Math.max(0,width));const text=g.querySelector('text');text.setAttribute('x',x+3);const limit=Math.max(0,Math.floor(width/7)-2);text.textContent=width>30?Array.from(frame.name).slice(0,limit).join(''):'';});document.getElementById('focus-label').textContent=`当前视图：${n.name} · ${n.value} 个样本`;details(n);search();}
+groups.forEach(g=>{const n=nodes[Number(g.dataset.id)];g.onclick=()=>zoom(n);g.onmouseenter=()=>details(n);g.onmouseleave=()=>details(selected);g.onfocus=()=>details(n);g.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();zoom(n);}};});
+document.getElementById('reset').onclick=()=>zoom(nodes[0]);document.getElementById('search').oninput=search;zoom(nodes[0]);
+</script></main></body></html>

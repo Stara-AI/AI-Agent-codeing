@@ -1,0 +1,11 @@
+{
+  "source": "synthetic",
+  "warning": "Synthetic stack records, not Linux CPU measurements",
+  "session": "cd6223b1b9af44a5adf86a28252fc268",
+  "segments": 6,
+  "duration_seconds": 6.01600000000326,
+  "hot_window_start": "2026-10-10T06:11:10.680877+00:00",
+  "hot_window_end": "2026-10-10T06:11:11.880877+00:00",
+  "query_note": "Query uses the interior of the hot phase, excluding transition sampling",
+  "state": "STOPPED"
+}

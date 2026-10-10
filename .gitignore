@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+build/
+*.egg-info/
+data/
+reports/
+*.sqlite*
+artifacts/simulation-run/
+artifacts/simulation-verified/
+simulation-data/
+artifacts/ui-review/
+autoprof-reports/
+runs/
+artifacts/archive/
+docs/archive/

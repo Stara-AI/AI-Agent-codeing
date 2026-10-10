@@ -1,0 +1,10 @@
+{
+  "frequency_hz": 49,
+  "rotation_seconds": 60,
+  "retention_hours": 24,
+  "max_data_bytes": 2147483648,
+  "min_free_bytes": 1073741824,
+  "disk_check_seconds": 5,
+  "call_graph": "fp",
+  "event": "cpu-clock"
+}

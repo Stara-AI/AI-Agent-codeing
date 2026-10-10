@@ -1,0 +1,81 @@
+{
+  "source": "synthetic",
+  "warning": "Synthetic stack records, not Linux CPU measurements",
+  "session": "3abe92dd6adf4d2d8340032b68706fdd",
+  "segments": 0,
+  "duration_seconds": 0.01600000000325963,
+  "hot_window_start": "2026-10-10T06:28:04.764936+00:00",
+  "hot_window_end": "2026-10-10T06:28:04.784936+00:00",
+  "query_note": "Query uses the interior of the hot phase, excluding transition sampling",
+  "state": "DISK_BUDGET"
+}
+{
+  "source": "synthetic",
+  "warning": "Synthetic stack records, not Linux CPU measurements",
+  "session": "9e5379e21b534408b397e01d7eb1e5dc",
+  "segments": 2,
+  "duration_seconds": 1.2189999999973224,
+  "hot_window_start": "2026-10-10T06:28:05.183008+00:00",
+  "hot_window_end": "2026-10-10T06:28:05.423008+00:00",
+  "query_note": "Query uses the interior of the hot phase, excluding transition sampling",
+  "state": "STOPPED"
+}
+test_missing_baseline_does_not_claim_new_hotspot (test_analysis.AnalysisTests) ... ok
+test_recursion_counts_once_and_delta_uses_each_window_total (test_analysis.AnalysisTests) ... ok
+test_config_limits (test_core.ParsingTests) ... ok
+test_empty_callchain_is_visible (test_core.ParsingTests) ... ok
+test_multiple_events_rejected (test_core.ParsingTests) ... ok
+test_nanosecond_half_open_boundary (test_core.ParsingTests) ... ok
+test_perf_command_no_shell (test_core.ParsingTests) ... ok
+test_pid_filter (test_core.ParsingTests) ... ok
+test_recursion_preserved (test_core.ParsingTests) ... ok
+test_timezone_equivalence (test_core.ParsingTests) ... ok
+test_timezone_required (test_core.ParsingTests) ... ok
+test_windows_doctor_explicit_failure (test_core.ParsingTests) ... ok
+test_gap_union (test_core.RenderingTests) ... ok
+test_html_and_script_escape (test_core.RenderingTests) ... ok
+test_report_budget_and_existing_output (test_core.RenderingTests) ... ok
+test_weight_partition (test_core.RenderingTests) ... ok
+test_active_and_corrupt_not_queryable (test_core.StorageTests) ... ok
+test_clock_jump_rejected (test_core.StorageTests) ... ok
+test_cross_segment_selection (test_core.StorageTests) ... ok
+test_expiration_does_not_remove_active (test_core.StorageTests) ... ok
+test_mapping (test_core.StorageTests) ... ok
+test_path_escape_rejected (test_core.StorageTests) ... ok
+test_query_budget_prevents_copy (test_core.StorageTests) ... ok
+test_query_cross_segment_real_report_fake_perf (test_core.StorageTests) ... ok
+test_query_no_data (test_core.StorageTests) ... ok
+test_reports_not_in_collection (test_core.StorageTests) ... ok
+test_decoder_failure_reports_stderr (test_evidence.EvidenceTests) ... ok
+test_decoder_timeout_stops_real_child (test_evidence.EvidenceTests) ... ok
+test_export_visible_only (test_evidence.EvidenceTests) ... ok
+test_noisy_measurements_not_claimed_pass (test_evidence.EvidenceTests) ... ok
+test_overhead_confidence_and_duration (test_evidence.EvidenceTests) ... ok
+test_capture_rotate_replay_hotspot (test_linux.LinuxIntegration) ... skipped 'real Linux perf and gcc required'
+test_cleanup_oldest_wall_time_across_boots (test_review.ReviewTests) ... ok
+test_complete_demo_from_another_working_directory (test_review.ReviewTests) ... ok
+test_decoder_explicit_process_fields (test_review.ReviewTests) ... ok
+test_decoder_spawn_failure_removes_temporary_files (test_review.ReviewTests) ... ok
+test_deferred_index_preserved_and_retryable (test_review.ReviewTests) ... recording retained but not indexed C:\Users\DELL\AppData\Local\Temp\tmpla9_csdc\s\perf.data.1: perf script timeout
+ok
+test_existing_index_schema_migrates (test_review.ReviewTests) ... ok
+test_fast_exiting_decoder_stderr_budget (test_review.ReviewTests) ... ok
+test_fresh_corrupt_record_not_immediately_expired (test_review.ReviewTests) ... ok
+test_generated_page_interactions (test_review.ReviewTests) ... ok
+test_invalid_collect_duration_rejected_before_attach (test_review.ReviewTests) ... ok
+test_live_perf_fd_unavailable_fails_closed (test_review.ReviewTests) ... ok
+test_perf_spawn_failure_publishes_failed_session (test_review.ReviewTests) ... ok
+test_perf_stop_timeout_kills_and_reaps_child (test_review.ReviewTests) ... ok
+test_pid_reuse_stops_perf_and_seals_last_file (test_review.ReviewTests) ... ok
+test_recovery_does_not_confuse_reboot_with_orphan (test_review.ReviewTests) ... ok
+test_recursive_header_same_symbol_different_ip (test_review.ReviewTests) ... ok
+test_systemd_graceful_stop_and_disk_backoff_contract (test_review.ReviewTests) ... ok
+test_thread_pid_is_process_id (test_review.ReviewTests) ... ok
+test_disk_budget_stops_simulation (test_simulation.SimulationTests) ... ok
+test_invalid_duration (test_simulation.SimulationTests) ... ok
+test_rotation_and_replay_after_hot_phase (test_simulation.SimulationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 53 tests in 9.078s
+
+OK (skipped=1)

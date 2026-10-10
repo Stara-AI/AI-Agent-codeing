@@ -1,0 +1,34 @@
+[Unit]
+Description=Continuous CPU profiling blackbox
+After=local-fs.target
+StartLimitIntervalSec=300
+StartLimitBurst=3
+
+[Service]
+Type=simple
+# Example only: choose a dedicated user with access to target PID and perf.
+User=cpu-profiler
+Group=cpu-profiler
+WorkingDirectory=/opt/cpu-blackbox
+EnvironmentFile=/etc/cpu-blackbox.env
+ExecStart=/usr/bin/python3 -m cpu_blackbox --data-dir /var/lib/cpu-blackbox --config /etc/cpu-blackbox.json collect --pid ${TARGET_PID}
+Restart=on-failure
+RestartSec=15
+RestartPreventExitStatus=75
+# Send TERM to the supervisor; it seals perf with SIGINT before group cleanup.
+KillMode=mixed
+KillSignal=SIGTERM
+TimeoutStopSec=150
+UMask=0077
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+StateDirectory=cpu-blackbox
+StateDirectoryMode=0700
+ReadWritePaths=/var/lib/cpu-blackbox
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

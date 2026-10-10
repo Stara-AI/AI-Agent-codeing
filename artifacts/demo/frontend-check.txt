@@ -1,0 +1,9 @@
+{
+  "check": "generated report JS",
+  "source_banner": true,
+  "zoom": true,
+  "stable_aspect_ratio": true,
+  "reset": true,
+  "search": true,
+  "nodes": 6
+}

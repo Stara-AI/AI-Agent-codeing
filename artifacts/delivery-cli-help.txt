@@ -1,0 +1,15 @@
+usage: __main__.py [-h] [--data-dir DATA_DIR] [--config CONFIG] [--perf PERF]
+                   {doctor,collect,simulate,status,reindex,query} ...
+
+Linux continuous CPU profiling and historical flamegraphs
+
+positional arguments:
+  {doctor,collect,simulate,status,reindex,query}
+    simulate            synthetic workflow demo; not a Linux/perf emulator
+    reindex             retry retained files that exceeded decode limits
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --data-dir DATA_DIR
+  --config CONFIG
+  --perf PERF

@@ -1,0 +1,62 @@
+{
+  "source": "SYNTHETIC SIMULATION; not Linux perf evidence",
+  "skill_reference": "https://github.com/hyf020908/auto-profiling-skill/blob/227f31fa37926a097c16b9ca9ee7e017f8746441/SKILL.md",
+  "skill_engine_executed": false,
+  "implementation": "Existing CPU Blackbox simulation/query; incident and baseline workflow adapted from the requested Skill",
+  "session": "cd6223b1b9af44a5adf86a28252fc268",
+  "target_samples": 41,
+  "baseline_samples": 40,
+  "full_samples": 203,
+  "baseline_error": null,
+  "target_window_ns": [
+    1791612670680877000,
+    1791612671880877000
+  ],
+  "baseline_window_ns": [
+    1791612669480877000,
+    1791612670680877000
+  ],
+  "deltas": [
+    {
+      "symbol": "hot_leaf",
+      "target_pct": 100.0,
+      "baseline_pct": 22.5,
+      "delta_pp": 77.5
+    },
+    {
+      "symbol": "main",
+      "target_pct": 100.0,
+      "baseline_pct": 100.0,
+      "delta_pp": 0.0
+    },
+    {
+      "symbol": "request_handler",
+      "target_pct": 100.0,
+      "baseline_pct": 100.0,
+      "delta_pp": 0.0
+    },
+    {
+      "symbol": "normal_work",
+      "target_pct": 0.0,
+      "baseline_pct": 77.5,
+      "delta_pp": -77.5
+    }
+  ],
+  "target_gaps": [
+    [
+      1791612671565581801,
+      1791612671596581800
+    ]
+  ],
+  "baseline_gaps": [
+    [
+      1791612669549877201,
+      1791612669596877200
+    ],
+    [
+      1791612670565877201,
+      1791612670596877200
+    ]
+  ],
+  "report": "C:\\Users\\DELL\\Desktop\\AI Agent codeing\\cpu-blackbox\\artifacts\\demo\\report\\index.html"
+}

@@ -1,0 +1,126 @@
+{
+  "start_wall_ns": 1791612668580581800,
+  "end_wall_ns": 1791612674549581801,
+  "sample_count": 203,
+  "unknown_samples": 0,
+  "events": [
+    "cpu-clock"
+  ],
+  "clock_mappings": [
+    {
+      "session": "cd6223b1b9af44a5adf86a28252fc268",
+      "uncertainty_ns": 7417400
+    }
+  ],
+  "sample_coverage_gaps_wall_ns": [
+    [
+      1791612669549581801,
+      1791612669596581800
+    ],
+    [
+      1791612670565581801,
+      1791612670596581800
+    ],
+    [
+      1791612671565581801,
+      1791612671596581800
+    ],
+    [
+      1791612672565581801,
+      1791612672612581800
+    ],
+    [
+      1791612673565581801,
+      1791612673612581800
+    ]
+  ],
+  "coverage_note": "Sample bounds only: gaps can indicate idle periods, loss or missing collection; not proof of uninterrupted coverage.",
+  "segments": [
+    {
+      "path": "C:\\Users\\DELL\\Desktop\\AI Agent codeing\\cpu-blackbox\\artifacts\\demo\\data\\cd6223b1b9af44a5adf86a28252fc268\\samples-000000.synthetic",
+      "session": "cd6223b1b9af44a5adf86a28252fc268",
+      "first_ns": 80424093000000,
+      "last_ns": 80425062000000,
+      "size": 7242,
+      "state": "AVAILABLE",
+      "error": "",
+      "sealed_wall_ns": 1791612669583326400
+    },
+    {
+      "path": "C:\\Users\\DELL\\Desktop\\AI Agent codeing\\cpu-blackbox\\artifacts\\demo\\data\\cd6223b1b9af44a5adf86a28252fc268\\samples-000001.synthetic",
+      "session": "cd6223b1b9af44a5adf86a28252fc268",
+      "first_ns": 80425109000000,
+      "last_ns": 80426078000000,
+      "size": 7206,
+      "state": "AVAILABLE",
+      "error": "",
+      "sealed_wall_ns": 1791612670592889000
+    },
+    {
+      "path": "C:\\Users\\DELL\\Desktop\\AI Agent codeing\\cpu-blackbox\\artifacts\\demo\\data\\cd6223b1b9af44a5adf86a28252fc268\\samples-000002.synthetic",
+      "session": "cd6223b1b9af44a5adf86a28252fc268",
+      "first_ns": 80426109000000,
+      "last_ns": 80427078000000,
+      "size": 7038,
+      "state": "AVAILABLE",
+      "error": "",
+      "sealed_wall_ns": 1791612671603596300
+    },
+    {
+      "path": "C:\\Users\\DELL\\Desktop\\AI Agent codeing\\cpu-blackbox\\artifacts\\demo\\data\\cd6223b1b9af44a5adf86a28252fc268\\samples-000003.synthetic",
+      "session": "cd6223b1b9af44a5adf86a28252fc268",
+      "first_ns": 80427109000000,
+      "last_ns": 80428078000000,
+      "size": 7122,
+      "state": "AVAILABLE",
+      "error": "",
+      "sealed_wall_ns": 1791612672603661200
+    },
+    {
+      "path": "C:\\Users\\DELL\\Desktop\\AI Agent codeing\\cpu-blackbox\\artifacts\\demo\\data\\cd6223b1b9af44a5adf86a28252fc268\\samples-000004.synthetic",
+      "session": "cd6223b1b9af44a5adf86a28252fc268",
+      "first_ns": 80428125000000,
+      "last_ns": 80429078000000,
+      "size": 7242,
+      "state": "AVAILABLE",
+      "error": "",
+      "sealed_wall_ns": 1791612673615001500
+    },
+    {
+      "path": "C:\\Users\\DELL\\Desktop\\AI Agent codeing\\cpu-blackbox\\artifacts\\demo\\data\\cd6223b1b9af44a5adf86a28252fc268\\samples-000005.synthetic",
+      "session": "cd6223b1b9af44a5adf86a28252fc268",
+      "first_ns": 80429125000000,
+      "last_ns": 80430062000000,
+      "size": 7029,
+      "state": "AVAILABLE",
+      "error": "",
+      "sealed_wall_ns": 1791612674579722500
+    }
+  ],
+  "warnings": [
+    "Synthetic simulation data; not Linux perf evidence",
+    "Synthetic simulation data; not Linux perf evidence",
+    "Synthetic simulation data; not Linux perf evidence",
+    "Synthetic simulation data; not Linux perf evidence",
+    "Synthetic simulation data; not Linux perf evidence",
+    "Synthetic simulation data; not Linux perf evidence"
+  ],
+  "config": {
+    "frequency_hz": 49,
+    "rotation_seconds": 1,
+    "retention_hours": 24,
+    "max_data_bytes": 2147483648,
+    "min_free_bytes": 1073741824,
+    "disk_check_seconds": 5,
+    "call_graph": "fp",
+    "event": "cpu-clock",
+    "perf_timeout_seconds": 120,
+    "max_query_seconds": 3600,
+    "max_decode_bytes": 268435456,
+    "max_report_bytes": 67108864,
+    "clock_jump_ns": 100000000,
+    "source": "synthetic"
+  },
+  "source": "SYNTHETIC SIMULATION / 合成模拟，不是真实 Linux perf 采样",
+  "status": "partial"
+}

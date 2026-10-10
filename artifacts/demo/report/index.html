@@ -1,0 +1,7 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CPU 模拟回查对比</title>
+<style>body{font-family:system-ui;max-width:1060px;margin:40px auto;padding:0 24px;background:#f3f6fa;color:#172033;line-height:1.8}section{background:white;padding:24px;border-radius:10px;margin:20px 0;border:1px solid #dce3ed}a{color:#1d4ed8}.source{background:#fff3cd;padding:12px}nav{display:flex;gap:24px;flex-wrap:wrap}</style>
+<h1>CPU 历史回查：三个窗口对比</h1><p class="source">SYNTHETIC 合成模拟；本页没有真实 Linux CPU 测量。</p>
+<section><h2>1. 故障窗口：41 个样本</h2><p>窗口里只有热点路径时，各层都是 100%，横条同宽是正常现象。</p><a href="incident/index.html">查看故障窗口火焰图</a></section>
+<section><h2>2. 紧邻的等长基线：40 个样本</h2><p>比较函数样本占比的变化。基线可能含热点起始阶段，应按实际数据解释。</p><a href="baseline/index.html">查看等长基线</a></section>
+<section><h2>3. 全保留时段：203 个样本</h2><p>包含正常与热点阶段，可以看到 normal_work 和 hot_leaf 分支。横轴仍表示样本占比。</p><a href="full/index.html">查看完整时段火焰图</a></section>
+<nav><a href="analysis.md">阅读分析报告</a><a href="comparison.json">查看对比数值</a></nav></html>

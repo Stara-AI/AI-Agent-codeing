@@ -1,0 +1,3 @@
+* text=auto eol=lf
+artifacts/archive/ export-ignore
+docs/archive/ export-ignore
